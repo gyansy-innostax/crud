@@ -36,8 +36,8 @@ const SavedData = ({user, setUser, setUserDetails, setUpdate, setIndex}) =>{
                 <tbody className="table-body">
                     {user.map((value,index)=> <tr key={index}>
                        <td className='table-text'>{value.name}</td> 
-                       <td className='table-text'>{value.phone}</td>
                        <td className='table-text'>{value.email}</td>
+                       <td className='table-text'>{value.phone}</td>
                        <td onClick={()=>handleDelete(index)}><MdDeleteForever size="1.6rem" cursor="pointer"/></td>
                        <td onClick={()=>handleUpdate(value,index)}><FaEdit  size="1.3rem" cursor="pointer" /></td>
                     </tr>)}
