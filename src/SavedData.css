@@ -1,26 +1,29 @@
 .table {
     background-color: #EBF4F6;
-    margin: 0 20rem;
+    margin: 0 20%;
     display: flex;
     justify-content: center;
     border-radius: 1rem;
-    align-items: center;
     padding-bottom: 1rem;
+    margin-top: 1rem;
 }
 h2{
     color: #088395;
 }
+th{
+    text-align: left;
+}
 
 th {
-    padding: .6rem;
+    padding: .8rem;
 }
-td {
-    padding: .3rem;
-}
-.delete-button, .edit-button {
-    padding: 0 .5rem;
-    font-size: small;
+.heading{
+    background-color: aliceblue;
+    padding: .5rem;
     border-radius: .5rem;
-    background-color: #37B7C3;
-    cursor: pointer;
+    margin: 0 20%;
+}
+.table-text{
+    padding: .5rem;
+
 }

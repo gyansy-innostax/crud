@@ -1,4 +1,6 @@
 import './SavedData.css'
+import { MdDeleteForever } from "react-icons/md";
+import { FaEdit } from "react-icons/fa";
 
 const SavedData = ({user, setUser, setUserDetails, setUpdate, setIndex}) =>{
 
@@ -19,7 +21,9 @@ const SavedData = ({user, setUser, setUserDetails, setUpdate, setIndex}) =>{
     
     return (
         <>
-        <h2>Saved Data</h2>
+        <div className='heading'>
+            <h2>Saved Data</h2>
+        </div>
         <div className="table">
             <table>
                 <thead className="table-heading">
@@ -31,11 +35,11 @@ const SavedData = ({user, setUser, setUserDetails, setUpdate, setIndex}) =>{
                 </thead>
                 <tbody className="table-body">
                     {user.map((value,index)=> <tr key={index}>
-                      <td>{value.name}</td> 
-                       <td>{value.phone}</td>
-                       <td>{value.email}</td>
-                       <td className="delete-button" onClick={()=>handleDelete(index)}>Del</td>
-                       <td className="edit-button" onClick={()=>handleUpdate(value,index)}>Edit</td>
+                       <td className='table-text'>{value.name}</td> 
+                       <td className='table-text'>{value.phone}</td>
+                       <td className='table-text'>{value.email}</td>
+                       <td onClick={()=>handleDelete(index)}><MdDeleteForever size="1.6rem" cursor="pointer"/></td>
+                       <td onClick={()=>handleUpdate(value,index)}><FaEdit  size="1.3rem" cursor="pointer" /></td>
                     </tr>)}
                 </tbody>
             </table>
